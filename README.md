@@ -4,7 +4,7 @@ This project implements a chat application with python. In addition it is implem
 
 ## Implementation
 
-I define 4 channels to handle the chat communication. Three of them are to initialize the websockets, to handle the messages and to disconnect. The other is a custom channel created to persist the data in the database as well as to consume the services from the URLs to get the financial data required.
+I define 4 channels to handle the chat communication. Three of them are to initialize the websockets, to handle the messages and to disconnect. The other is a custom channel created to persist the data in the database as well as to consume the services from the URLs to get the financial data required. The channel layer used is redis asgi. 
 
 In order to add the functionality to open different conversations with each person, I define a Room model with both users as subscribers, so each time a conversation is requested, it creates or opens the right channel.
 
