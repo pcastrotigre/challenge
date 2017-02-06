@@ -16,6 +16,3 @@ Additionally, at the moment, we define two types of commands:
 Both can set the parameters that I want to receive or the company from I want to get the data from. The prefix YQL is to get the information from the YQL yahoo service, and the FNC prefix is to get the information from the yahoo finance service.
 
 As the YQL is like a query statement, I only support the **EQUAL** and the **IN** operation to filter the result. Most of the values could be initialized and changed like the **FROM** table, the **SELECT** statement and the **WHERE** filters. However if we try to retrieve non existing columns, we will have a message that the data is missing.
-
-I am not using RabbitMQ for this solution, but it could be implemented aside the channels too. 
-
