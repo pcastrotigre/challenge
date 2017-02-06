@@ -1,0 +1,10 @@
+{% extends "financial_app/base.html" %}
+
+{% block content %}
+  <h1>Users List</h1>
+  <ul>
+  {% for obj in users %}
+    <li>Chat with: <a class="button button-primary" href="{% url 'new_room' %}?username={{ obj.username }}">{{ obj.username }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock content %}
